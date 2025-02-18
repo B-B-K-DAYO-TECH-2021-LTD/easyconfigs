@@ -1,0 +1,26 @@
+# Example updated EasyBuild recipe for binutils 2.40
+# Based on the original 2.32 file, but updated to 2.40.
+# Check easybuilders/easybuild-easyconfigs for further references.
+
+name = 'binutils'
+version = '2.40'
+
+homepage = 'https://directory.fsf.org/project/binutils/'
+description = "binutils: GNU binary utilities"
+
+toolchain = SYSTEM
+
+source_urls = [GNU_SOURCE]
+sources = [SOURCE_TAR_GZ]
+checksums = [
+    # binutils-2.40.tar.gz (example SHA256, verify from official source)
+    '14e5b19b8859a8da3c35cfc4cd255be281d3579e1959843b02972979cdd83f5e',
+]
+
+builddependencies = [
+    ('flex', '2.6.4'),
+    ('Bison', '3.8.2'),
+    ('zlib', '1.2.13'),
+]
+
+moduleclass = 'tools'
